@@ -1,0 +1,406 @@
+1.MAX OF TWO NUMBERS
+
+ #include<iostream>
+using namespace std;
+
+void max(int x,int y)
+{
+   if(x>y){
+       cout<<x;
+   }else{
+       cout<<y;
+   }
+    //write conditions here to print maximum of 2 numbers
+}
+
+
+EVEN/ODD
+
+#include<iostream>
+using namespace std;
+
+void OddEven(int n)
+{
+    
+ if(n%2==0)
+ {
+     cout<<"even"; }
+ else
+ {
+     cout<<"odd";
+     
+ }//write condition here to check "odd" or "even"
+}
+
+
+YOUNG NOT YOUNG
+
+
+
+#include<iostream>
+using namespace std;
+
+void CheckAge(int age)
+{
+    
+   if(age>=12 && age<50)
+   {
+       cout<<"young";
+   }
+   else{
+       cout<<"not young";
+   }//write conditional statement here
+    //output must be all in lower case
+}
+
+
+
+eligible or not 
+
+
+
+
+#include<iostream>
+using namespace std;
+
+void Eligible(int age)
+{
+    if (age<12 || age>50){
+        cout<<"eligible";
+    }else{
+        cout<<"not eligible";
+    }
+    //write condition here to check if person is eligible
+}
+
+
+
+
+
+NATURE OF QUADRATIC ROOTS
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+void Roots(float a,float b,float c)
+{
+    float d,r1,r2;
+    
+    d=b*b-4*a*c;
+    
+    if(d==0){
+        r1=-b/(2*a);
+        cout<<"real and equal "<<r1;
+    }
+    else{
+        if(d>0){
+            r1=(-b+sqrt(d))/(2*a);
+            r2=(-b-sqrt(d))/(2*a);
+            cout<<"real and unequal "<<r1<<" "<<r2;
+        }
+        else{
+            cout<<"imaginary";
+        }
+    }
+}
+
+
+
+GRADING STUDENTS MARKS
+
+
+#include<iostream>
+using namespace std;
+
+void Grades(int m1,int m2,int m3)
+{
+    float Total,Avg;
+    Total=m1+m2+m3;
+    Avg=Total/3;
+   if(Avg>=60){
+       cout<<"A";
+   }
+   else if(Avg>=35 && Avg<60)
+   { 
+       cout<<"B";
+   }//write nested if statements to print grades
+    else {
+        cout<<"C";
+    }
+}
+
+
+BILLING DISCOUNT
+
+#include<iostream>
+using namespace std;
+
+void Discount(int amount)
+{
+    float disAmount;
+    if(amount>=5000){
+        disAmount=amount - (0.2*amount);
+        cout<<disAmount;
+    }else if(amount>=2000 && amount<5000){
+        disAmount= amount - (0.1*amount);
+        cout<<disAmount;
+    }else{
+        disAmount=amount-(0.05*amount);
+        cout<<disAmount;
+    }
+    //write nested onditions to print discounted amount 
+}
+
+
+
+
+WRITTING DIGITS IN WORDS
+#include<iostream>
+
+using namespace std;
+
+void DigitToWord(int d)
+{
+  if(d==1){
+      cout<<"one";
+  } else if(d==2){
+      cout<<"two";
+  } else if(d==3){
+      cout<<"three";
+  }else if(d==4){
+      cout<<"four";
+  }else if(d==5){
+      cout<<"five";
+  }else if(d==6){
+      cout<<"six";
+  }else if(d==7){
+      cout<<"seven";
+  }else if(d==8){
+      cout<<"eight";
+  }else if(d==9){
+      cout<<"nine";
+  }else{
+      cout<<"zero";
+  }
+    
+}	
+
+
+
+CALCULATOR USING SWITCH 
+
+#include<iostream>
+
+using namespace std;
+
+void ArithOpt(int x,int y, int choice)
+{
+    int c;
+    switch(choice) {
+        case 1 : cout<<x+y;
+                break;
+        case 2 : cout<<x-y;
+                break;
+        case 3 : cout<<x*y;
+                break;
+        case 4 : cout<<x/y;
+                break;
+    }
+}
+
+
+
+DIGIT OF A NUMBER 
+#include<iostream>
+using namespace std;
+
+void Digits(int n)
+{
+    int digit;
+    while(n>0){
+        digit = n%10;
+        n = n/10;
+        cout<<digit<<" ";
+    }
+}
+
+
+ARMSTRONG 
+#include<iostream>
+
+using namespace std;
+
+void Armstrong(int n)
+{
+    int sum=0,r;
+    int m=n;
+    
+    while(n>0){
+        r = n%10;
+        n = n/10;
+        sum = sum + r*r*r;
+    }
+    
+     if(sum==m)
+        cout<<"armstrong";
+    else
+        cout<<"not armstrong";
+}    
+
+
+
+PALINDROME
+#include<iostream>
+using namespace std;
+
+void Palindrome(int n)
+{
+    int rev=0;
+    int r;
+    int m=n;
+    
+    while(n>0){
+        r = n%10;
+        n = n/10;
+        rev = rev*10 +r;
+    }
+    
+    if(rev == m) cout<<"palindrome";
+    else cout<<"not a palindrome";
+}
+
+
+
+DISPLAY EVERY ELEMENT
+
+#include<iostream>
+using namespace std;
+
+void Display()
+{
+    int A[]={2,4,6,8,10};
+    
+    for(int x:A)
+        cout<<x<<" ";
+    //use foreach loop to display all emelents from Array;
+    
+}
+
+
+
+
+SUM OF ALL ARRAYS 
+#include<iostream>
+using namespace std;
+
+void Sum()
+{
+    int A[]={2,4,11,8,10,15,13},n=7;
+    int sum=0;
+    
+    for(int i=0;i<n;i++) {
+        sum = sum + A[i];
+    }
+    cout<<sum;
+}
+
+
+ 
+
+DIFFERENCE BETWEEN MAX DIGIT AND SECOND MAX DIGIT OF AFIVE DIGIT NUMBER 
+
+
+#include<iostream>
+using namespace std;
+int main ()
+{
+	int n,i=0,Smax=0,max=0,k,x=0,p=0,t,r=0;
+	cin>>n;
+	t=n;
+while(n>0)
+	{
+	    x=n%10;
+	    if(max<x)
+	    {
+	        max=x;
+	    }
+	    n=n/10;
+	}
+	while(t>0)
+	
+	{
+	    x=t%10;
+	    r=max*x;
+	if(r>p &&  r<(max*max))
+	{
+	    Smax=x;
+	   p=r;
+	}
+	  
+	  t=t/10;
+	}
+	   
+	  //  if(max>x)
+	 //   {
+	   //     min=x;
+	       
+	    //}
+	k = max-Smax;
+	cout<<k;
+//	cout<<max;
+	return 0;
+}	
+
+
+
+
+add using functions
+
+#include<iostream>
+using namespace std;
+
+
+//write a add() function here to add 2 numbers
+int add(int x, int y){
+    int z;
+    z= x+y;
+    return z;
+}
+void Main()
+{
+    cout<<add(10,5);
+}
+
+
+
+
+OVERLOADING FUNCTION 
+#include<iostream>
+using namespace std;
+
+
+int sum(int x,int y)
+{
+    return x+y;
+}
+//1. write a sum() function here to add 2 integer
+ float sum(float x,float y)
+ {
+ return x+y;}
+ //2. write a sum() function here to add 2 floats
+int sum(int x,int y,int z)
+{
+    return x+y+z;
+}//3. write a sum() function here to add 3 integer
+
+
+void Main()
+{
+    cout<<sum(10,5);
+    cout<<sum(12.9f,8.3f);
+    cout<<sum(10,20,30);
+}
+
+
+
